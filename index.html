@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link href="style.css" rel="stylesheet" />
+    <title>CALCULADORA GASTOS</title>
+</head>
+
+<body>
+    <div id="seccion1" class="container-fluid p-5 text-center img1">
+        <h2>Presupuesto disponible</h2>
+        <h1 id="dineroTotal " class="bg-gradient">....</h1>
+        <div class="container span mt-5 p-3 bg-primary">
+            <span>Ingresos</span>
+            <span id="ningresos">total
+            </span>
+
+        </div>
+        <div class="container p-3 span mt-5 bg-warning">
+            <span>Egresos</span>
+            <span id="ningresos">total
+            </span>
+
+        </div>
+
+    </div>
+    <div id="seccion2 " class="container text-center mt-5">
+
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            seleccionar
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">+</a></li>
+            <li><a class="dropdown-item" href="#">-</a></li>
+        </ul>
+
+        <input type="text" placeholder="Ingresar descripcion">
+        <input type="number" name="numero">
+        <button class="btn bg-primary"> ingresar</button>
+
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6 ">
+                <table class="ctable table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="row text-center">Ingresos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-6  align-items-center">
+                <table class="ctable table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="row text-center">Egresos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+</html>

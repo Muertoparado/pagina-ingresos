@@ -1,0 +1,10 @@
+.img1{
+    background-image: url(img/18822.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30rem;
+    object-fit: scale-down;
+}
+.span{
+    width: 40%;
+}
