@@ -27,7 +27,7 @@ export default{
     costo:"-",
    },
    dineroT:"00",
-   seccion1(){
+   /* seccion1(){
     document.querySelector("#seccion1").insertAdjacentHTML("beforeend", `
     <h2>${this.title.ti}</h2>
     <h1 id="dineroTotal " class="bg-gradient">${this.dineroT}</h1>
@@ -96,5 +96,13 @@ export default{
     </div>`)
 
 
+   } */
+
+   fragShow(){
+    const ws = new Worker("./storage/wsContent.js", {type:"module"});
+
+    ws.addEventListener("message", (e)=>{
+        let doc = new DOMParser().parseFromString(e.data, "text/html");
+    })
    }
 }
