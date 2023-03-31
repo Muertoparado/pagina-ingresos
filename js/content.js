@@ -1,5 +1,5 @@
 export default{
-    title:{
+  /*   title:{
         ti:"Presupuesto disponible"
     },
     btn:"Ingresar",
@@ -26,7 +26,7 @@ export default{
     title:"uu",
     costo:"-",
    },
-   dineroT:"00",
+   dineroT:"00", */
    /* seccion1(){
     document.querySelector("#seccion1").insertAdjacentHTML("beforeend", `
     <h2>${this.title.ti}</h2>
