@@ -1,5 +1,5 @@
 export default{
-  /*   title:{
+    title:{
         ti:"Presupuesto disponible"
     },
     btn:"Ingresar",
@@ -26,8 +26,8 @@ export default{
     title:"uu",
     costo:"-",
    },
-   dineroT:"00", */
-   /* seccion1(){
+   dineroT:"00",
+    seccion1(){
     document.querySelector("#seccion1").insertAdjacentHTML("beforeend", `
     <h2>${this.title.ti}</h2>
     <h1 id="dineroTotal " class="bg-gradient">${this.dineroT}</h1>
@@ -51,8 +51,8 @@ export default{
         ${this.seleccionar.name}
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">${this.seleccionar.op1}</a></li>
-        <li><a class="dropdown-item" href="#">${this.seleccionar.op2}</a></li>
+        <li><a class="dropdown-item" name="suma" href="#">${this.seleccionar.op1}</a></li>
+        <li><a class="dropdown-item" name="resta" href="#">${this.seleccionar.op2}</a></li>
     </ul>
 
     <input type="text" placeholder="Ingresar descripcion">
@@ -96,13 +96,22 @@ export default{
     </div>`)
 
 
-   } */
+   },
 
-   fragShow(){
+  /*  fragShow(){
     const ws = new Worker("./storage/wsContent.js", {type:"module"});
 
     ws.addEventListener("message", (e)=>{
         let doc = new DOMParser().parseFromString(e.data, "text/html");
     })
+   } */
+   suma(){
+    console.log("esto es suma");
+   },
+   resta(){
+    console.log("esto es resta");
+   },
+   operacion(){
+    (this.seleccionar.op1) ? suma(): resta();
    }
 }

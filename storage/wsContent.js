@@ -1,6 +1,6 @@
 export let wsContent = {
 
-    seccion1(dato) {
+   /*  seccion1(dato) {
         return `<h2>${dato.title.ti}</h2>
         <h1 id="dineroTotal " class="bg-gradient">${dato.dineroT}</h1>
         <div class="container span mt-5 p-3 bg-primary">
@@ -66,7 +66,7 @@ export let wsContent = {
             </table>
         </div>
     </div>`
-    }
+    } */
 
 }
 
