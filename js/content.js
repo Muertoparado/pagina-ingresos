@@ -1,3 +1,24 @@
+import config from "../storage/config.js";
+
+export default{
+    showContent(){
+        config.dataContent();
+        Object.assign(this, JSON.parse(localStorage.getItem("content")));
+        const ws = new Worker("storage/wsContent.js",{type:"module"});
+        ws.postMessage({module:"showContent", data:this.info});
+
+        ws.addEventListener("message", (e)=>{
+             document.querySelector("#titulo").innerHTML=e.data[0];
+             document.querySelector("#dinero").innerHTML=e.data[1];
+             document.querySelector("#divIngreso").innerHTML=e.data[2];
+             document.querySelector("#divEgreso").innerHTML=e.data[3];
+             
+             
+        })
+    }
+}
+
+/* let dinero=document.querySelector("button")
 export default{
     title:{
         ti:"Presupuesto disponible"
@@ -46,18 +67,15 @@ export default{
     },
     seccion2(){
         document.querySelector("#seccion2").insertAdjacentHTML("beforeend", `
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        ${this.seleccionar.name}
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" name="suma" href="#">${this.seleccionar.op1}</a></li>
-        <li><a class="dropdown-item" name="resta" href="#">${this.seleccionar.op2}</a></li>
-    </ul>
+        <select id="seleccion">
+        <option value="op1">${this.seleccionar.op1}</option>
+        <option value="op2">${this.seleccionar.op2}</option>
+       
+      </select>
 
-    <input type="text" placeholder="Ingresar descripcion">
+    <input type="text" name="descripcion" placeholder="Ingresar descripcion">
     <input type="number" name="numero">
-    <button class="btn bg-primary"> ${this.btn}</button>
+    <button class="btn bg-primary" type="submit" > ${this.btn}</button>
 
 </div>
 <div class="container mt-5">
@@ -98,20 +116,38 @@ export default{
 
    },
 
-  /*  fragShow(){
+   fragShow(){
     const ws = new Worker("./storage/wsContent.js", {type:"module"});
 
     ws.addEventListener("message", (e)=>{
         let doc = new DOMParser().parseFromString(e.data, "text/html");
     })
-   } */
+   }
    suma(){
     console.log("esto es suma");
+    var dataMas={
+        "descripcion":descripcion,
+        "numero":numero,
+    };
+    localStorage.setItem("dataMas",JSON.stringify(dataMas))
    },
    resta(){
     console.log("esto es resta");
+    var dataMenos={
+        "descripcion":descripcion,
+        "numero":numero,
+    };
+    localStorage.setItem("dataMas",JSON.stringify(dataMenos))
    },
-   operacion(){
-    (this.seleccionar.op1) ? suma(): resta();
-   }
-}
+
+
+    
+
+} */
+/* dinero.addEventListener("submit",(e)=>{
+    var descripcion= document.getElementsByName('descripcion').value;
+    var numero= document.getElementsByName('numero').value;
+
+    (seleccion=='+') ? this.suma(): this.resta();
+
+}) */

@@ -3,6 +3,7 @@
     "conventionalCommits.scopes": [
         "pagina ingresos",
         "formato js ",
-        "rama worker"
+        "rama worker",
+        "formato nuevo"
     ]
 }
