@@ -19,13 +19,16 @@
     <div  class="container-fluid p-5 text-center img1">
         <h2 id="titulo"></h2>
         <div id="dinero" class="bg-gradient"></div>
-        <div id="divIngreso" class="container span mt-5 p-3 bg-primary">
+
+        <div  class="container span mt-5 p-3 bg-primary">
+            <div id="divIngreso"></div>
             <!-- <span>Ingresos</span>
             <span id="ningresos">total
             </span> -->
 
         </div>
-        <div id="divEgreso" class="container p-3 span mt-5 bg-warning">
+        <div  class="container p-3 span mt-5 bg-warning">
+            <div id="divEgreso"></div>
            <!--  <span>Egresos</span>
             <span id="ningresos">total
             </span>
@@ -35,7 +38,32 @@
     </div>
     <div class="container text-center mt-5">
         <div id="seccion2"></div>
+        <select id="seleccion">
+            <option value="op1">+</option>
+            <option value="op2">-</option>
+           
+          </select>
 
+          <input id ="descripcion" type="text" placeholder="Ingresar descripcion">
+        <input id="valor" type="number" name="numero">
+        <button id="btn" class="btn bg-primary"> Ingresar</button>
+
+        <div id="select" class="d-flex align-items-center justify-content-around vh-80 " >
+            <section>
+                  <span class="fs-3">Ingresos</span>
+                  <div class="d-flex gap-2 mb-5" id="entradas">
+    
+                  </div>
+            </section>
+    
+            <section>
+              <span class="fs-3">Egresos</span>
+              <div class="d-flex gap-2 mb-5" id="salidas">
+    
+              </div>
+            </section>
+    
+          </div>
        <!--  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
             data-bs-toggle="dropdown" aria-expanded="false">
             seleccionar
