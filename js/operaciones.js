@@ -32,7 +32,7 @@ export default{
     },
 
     selOp(seleccion){
-        seleccion=="+" ?this.mas() : this.menos()
+        seleccion=="op1" ?this.mas() : this.menos()
     },
 
     operacion(){

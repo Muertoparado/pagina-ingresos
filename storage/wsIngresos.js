@@ -1,6 +1,16 @@
 export default{
-    showIngreso(d1){
-        let plantilla = "";
+    showIngreso(titulo,valor){
+             
+        return`
+    <div class="card" style ="width: 18rem;">
+        <div class="card-body text-danger">
+        <h5 class="card-title">${titulo}</h5>
+        <p class="card-text">${valor}</p>        
+        <a href="#" class="btn btn-danger">Eliminar</a>
+        </div>
+    </div>
+        `
+       /*  let plantilla = "";
         d1.forEach((val, id) => {
             plantilla += `div class="container mt-5">
             
@@ -12,7 +22,6 @@ export default{
                         </tbody>
                     `
         });
-        /* document.querySelector("#company").insertAdjacentHTML("beforeend", plantilla); */
         return `<div class="row">
         <div class="col-6 modal-dialog">
             <table class="ctable table-striped table-hover">
@@ -23,7 +32,7 @@ export default{
                 </thead>
                 ${plantilla}
                 </table>
-                </div>`
+                </div>` */
     },
     parseString(total) {
         let convertion = total.split('')

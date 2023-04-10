@@ -1,8 +1,26 @@
 export let  wsEgresos={
-    showEgreso(d1){
-        let plantilla = "";
+    showEgreso(titulo,valor){
+         
+        return`
+    <div class="card" style ="width: 18rem;">
+        <div class="card-body text-danger">
+        <h5 class="card-title">${titulo}</h5>
+        <p class="card-text">${valor}</p>        
+        <a href="#" class="btn btn-danger">Eliminar</a>
+        </div>
+    </div>
+        `
+     /*    let x =`<div class="row">
+        <div class="col-6 modal-dialog">
+            <table class="ctable table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="row text-center">Ing</th>
+                    </tr>
+                </thead>`
+        let plantilla = ""
         d1.forEach((val,id) => {
-            plantilla += `div class="container mt-5">
+            plantilla += /* div class="container mt-5"> `
             
                         <tbody>
                             <tr>
@@ -11,18 +29,11 @@ export let  wsEgresos={
                             </tr>
                         </tbody>
                     `
-        });
-        return `<div class="row">
-        <div class="col-6 modal-dialog">
-            <table class="ctable table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th scope="row text-center">Ing</th>
-                    </tr>
-                </thead>
+        };
+        return `
                 ${plantilla}
                 </table>
-                </div>`
+                </div>` */
     },
     parseString(total) {
         let convertion = total.split('')

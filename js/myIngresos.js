@@ -8,7 +8,7 @@ export default{
         ws.postMessage({module:"ingresos", data:this.data});
 
         ws.addEventListener("message", (e)=>{
-            document.querySelector("#ingreso").innerHTML=e.data;
+            document.querySelector("#divIngreso").innerHTML=e.data;
 
             ws.terminate();
         })
