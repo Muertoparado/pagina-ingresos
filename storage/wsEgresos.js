@@ -1,18 +1,17 @@
-export default{
-    showEgresos(d1){
+export let  wsEgresos={
+    showEgreso(d1){
         let plantilla = "";
-        d1.forEach((val, id) => {
+        d1.forEach((val,id) => {
             plantilla += `div class="container mt-5">
             
                         <tbody>
                             <tr>
-                                <td>${val.titulo}</td>
-                                <td>${val.dinero}</td>
+                                <td>${val.descripcion}</td>
+                                <td>${val.valor}</td>
                             </tr>
                         </tbody>
                     `
         });
-        /* document.querySelector("#company").insertAdjacentHTML("beforeend", plantilla); */
         return `<div class="row">
         <div class="col-6 modal-dialog">
             <table class="ctable table-striped table-hover">
@@ -44,6 +43,6 @@ self.addEventListener("message", (e)=>{
     postMessage(
         [
             wsEgresos.operationMenos(e.data.resources[1], e.data.resources[2]),
-            wsEgresos.showEgresos(e.data.resources[0],e.data.resources[1])
+            wsEgresos.showEgreso(e.data.resources[0],e.data.resources[1])
         ]);
 })

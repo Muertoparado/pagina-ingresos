@@ -10,21 +10,21 @@ let salidas = document.querySelector("#salidas")
 export default{
     mas(){
         const wsMas= new Worker('storage/wsIngresos.js', {type:"module"})
-        wsMas.postMessage({resources:[valor.value, dinero.value,divIngreso.innerHTML]})
+        wsMas.postMessage({resources:[valor.value, descripcion.value,divIngreso.innerHTML]})
         wsMas.addEventListener("message",(e)=>{
-            dinero.innerHTML=e.data[0]
+            descripcion.innerHTML=e.data[0]
             divIngreso.innerHTML="Ingreso"+e.data[0]
             entradas.insertAdjacentHTML('beforeend', e.data[1])
         })
     },
 
     menos(){
-        const wsMenos= new Worker ('storage/wsEgresos.js', {type:'module'})
+        const wsMenos= new Worker ('storage/wsEgresos.js', {type:"module"})
         wsMenos.postMessage({resources:[
-            valor.value, dinero.value,divEgreso.innerHTML
+            valor.value, descripcion.value,divEgreso.innerHTML
         ]})
         wsMenos.addEventListener("message", (e)=>{
-            dinero.innerHTML=e.data[0]
+            descripcion.innerHTML=e.data[0]
             divEgreso.innerHTML="Egreso"+e.data[0]
             salidas.insertAdjacentHTML('beforeend', e.data[1])
 
@@ -36,7 +36,7 @@ export default{
     },
 
     operacion(){
-        document.querySelector("btn").addEventListener('click',()=>{
+        document.querySelector("#btn").addEventListener("click",()=>{
             this.selOp(seleccion.value)
         })
     }
