@@ -1,4 +1,4 @@
-export default{
+export let wsIngresos = {
     showIngreso(titulo,valor){
              
         return`
@@ -50,9 +50,10 @@ export default{
 }
 
 self.addEventListener("message", (e)=>{
+    console.log(e.data.resources[0])
     postMessage(
         [
-            wsIngresos.operationPlus(e.data.resources[1], e.data.resources[2]),
+            wsIngresos.operationPlus(e.data.resources[0], e.data.resources[2]),
             wsIngresos.showIngreso(e.data.resources[0],e.data.resources[1])
         ]);
 })

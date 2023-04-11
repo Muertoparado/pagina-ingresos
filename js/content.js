@@ -1,21 +1,5 @@
-import config from "../storage/config.js";
-
-export default{
-    showContent(){
-        config.dataContent();
-        Object.assign(this, JSON.parse(localStorage.getItem("content")));
-        const ws = new Worker("storage/wsContent.js",{type:"module"});
-        ws.postMessage({module:"showContent", data:this.info});
-
-        ws.addEventListener("message", (e)=>{
-             document.querySelector("#titulo").innerHTML=e.data[0];
-             document.querySelector("#dinero").innerHTML=e.data[1];
-             document.querySelector("#divIngreso").innerHTML=e.data[2];
-             document.querySelector("#divEgreso").innerHTML=e.data[3];
-             
-             
-        })
-    }
+export default {
+  
 }
 
 /* let dinero=document.querySelector("button")

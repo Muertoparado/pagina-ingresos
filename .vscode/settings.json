@@ -1,9 +1,0 @@
-{
-    "liveServer.settings.port": 5501,
-    "conventionalCommits.scopes": [
-        "pagina ingresos",
-        "formato js ",
-        "rama worker",
-        "formato nuevo"
-    ]
-}

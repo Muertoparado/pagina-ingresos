@@ -51,9 +51,10 @@ export let  wsEgresos={
 }
 
 self.addEventListener("message", (e)=>{
+    console.log(e.data)
     postMessage(
         [
-            wsEgresos.operationMenos(e.data.resources[1], e.data.resources[2]),
+            wsEgresos.operationMenos(e.data.resources[0], e.data.resources[2]),
             wsEgresos.showEgreso(e.data.resources[0],e.data.resources[1])
         ]);
 })
